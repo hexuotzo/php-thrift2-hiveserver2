@@ -48,8 +48,8 @@ class TSaslClientTransport extends TTransport {
         $header = pack('CN', self::START, strlen($mechanism));
         $this->transport_->write($header . $mechanism);
 
-        $username = 'sanshengshi';
-        $password = '3s0978'; //随意
+        $username = 'hahahahaha';
+        $password = '1234';  #密码为空随便写1个 不要传空字符串
         $body = chr(0) . $username . chr(0) . $password;
 
         $header = pack('CN', self::COMPLETE, strlen($body));
